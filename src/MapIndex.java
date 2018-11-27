@@ -6,6 +6,13 @@ import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
+/**
+ * This code gets the lines on which a certain word is held
+ * (kinda like grep)
+ * @author benpazienza derekmorales
+ * @version 1.0 11/27/2018
+ *
+ */
 public class MapIndex {
 
 	protected static String FILE = "data.txt";
@@ -36,28 +43,3 @@ public class MapIndex {
 	}
 }
 
-class TreeMapIndex {
-	protected Map<String, TreeSet<Integer>> index;
-
-	public TreeMapIndex() {
-		index = new TreeMap<>();
-	}
-
-	public void add(String w, int lineNum) {
-		TreeSet<Integer> i = null;
-		if (!index.containsKey(w))
-		{
-			i = new TreeSet<Integer>();
-			index.put(w, i);
-		}
-		i = index.get(w);
-		i.add(lineNum);
-	}
-	
-	public void print()
-	{
-		for(String s:index.keySet())
-			System.out.println(s + " - " + index.get(s).toString());
-	}
-	
-}
