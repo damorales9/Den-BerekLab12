@@ -15,7 +15,7 @@ import java.util.TreeSet;
  */
 public class MapIndex {
 
-	protected static String FILE = "data.txt";
+	protected static String FILE = "darthplagueis.txt";
 
 	public static void main(String[] args) throws FileNotFoundException {
 		TreeMapIndex t = new TreeMapIndex();
